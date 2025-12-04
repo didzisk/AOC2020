@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "AOC2020", "AOC2020\AOC2020.fsproj", "{4EAC6A42-E68A-45CF-93A6-A4EE170F764D}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Utils", "Utils\Utils.fsproj", "{CE3A2F2F-7307-440A-BA5E-8F2AA0679BDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4EAC6A42-E68A-45CF-93A6-A4EE170F764D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EAC6A42-E68A-45CF-93A6-A4EE170F764D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EAC6A42-E68A-45CF-93A6-A4EE170F764D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EAC6A42-E68A-45CF-93A6-A4EE170F764D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE3A2F2F-7307-440A-BA5E-8F2AA0679BDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE3A2F2F-7307-440A-BA5E-8F2AA0679BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE3A2F2F-7307-440A-BA5E-8F2AA0679BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE3A2F2F-7307-440A-BA5E-8F2AA0679BDD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

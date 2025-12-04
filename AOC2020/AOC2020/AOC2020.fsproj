@@ -15,4 +15,8 @@
       <ProjectReference Include="..\Utils\Utils.fsproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="FParsec" Version="2.0.0-beta2" />
+    </ItemGroup>
+
 </Project>

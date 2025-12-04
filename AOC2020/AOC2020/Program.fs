@@ -1,1 +1,1 @@
-﻿Dec01.Part1()
+﻿Dec02.Calc()

@@ -1,1 +1,1 @@
-﻿Dec05.Calc()
+﻿Dec06.Calc()

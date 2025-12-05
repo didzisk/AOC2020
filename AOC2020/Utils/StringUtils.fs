@@ -25,3 +25,6 @@ let trim (s:string) =
     
 let join (c:char) (s: string seq) =
     String.Join(c, s)
+    
+let index (t:string) (s:string) =
+    s.IndexOf t

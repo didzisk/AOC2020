@@ -7,42 +7,19 @@ let filename = MetaUtils.getTodayInput 10
 let inputStrings =
     File.ReadAllLines filename
 
-let sLines lines =
-    0::(List.sort lines)
-
-
 let hops lines =
-    let slines = 
-        lines
-        |> sLines
-
-    slines
-    |> List.mapi
-        (fun i x->
-            if i<(List.length slines)-1 then
-                slines.[i+1]-x
-            else
-                3
-        )
-
-let ones (lines:int list) =
     lines
-    |> List.filter (fun x->x=1)
-    |> List.length
+    |> List.pairwise
+    |> List.map (fun (a,b)-> b-a)
 
-let threes lines =
-    lines
-    |> List.filter (fun x->x=3)
-    |> List.length
-    
 let calc1 (lines: string array)=
 
     let slines = 0::(lines |> Seq.map int |> Seq.sort |> List.ofSeq)
     let shops = slines|> hops
 
-    let c1 = ones shops
-    let c3 = threes shops
-    c1 * c3
+    let c1 = shops |> List.filter (fun x->x=1) |> List.length
+    let c3 = shops |> List.filter (fun x->x=3) |> List.length
+    c1 * (c3 + 1)
 
 let rec countways adapters start goal memo =
     let k=(List.length adapters, start)

@@ -35,10 +35,18 @@ let findWhere predicate arr =
     allWhere predicate arr
     |> Seq.head
 
-let validPos (world:'a array array) (r,c) =     
-    let validRow = r>=0 && r<world.Length
-    let validCol = c>=0 && c<world[0].Length
+let validPos (world) (r,c) =     
+    let validRow = r>=0 && r<(world |> Seq.length)
+    let validCol = c>=0 && c<(world |> Seq.head |> Seq.length)
     validRow && validCol
     
 let dirsX = [(-1,-1);(-1,0);(-1,1);(0,-1);(0,1);(1,-1);(1,0);(1,1)]
 let dirs = [(-1,0);(0,-1);(0,1);(1,0)] //N W E S
+
+let arraysEqual world next =
+    Seq.map2 (fun w n ->
+        Seq.map2 (fun ww nn -> ww=nn) w n
+        |> Seq.forall id
+        ) world next  
+    |> Seq.forall id
+            
